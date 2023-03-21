@@ -1,12 +1,10 @@
-import 'dart:convert';
-import 'dart:io';
-import 'package:assignment_assist/Services/api_path.dart';
 import 'package:assignment_assist/Services/tokenString.dart';
 import 'package:assignment_assist/Utils/style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -20,14 +18,13 @@ class ScanScreen extends StatefulWidget {
 
 class _ScanScreenState extends State<ScanScreen> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-  Barcode? result;
+  // Barcode? result;
   QRViewController? controller ;
-
+  MobileScannerController cameraController = MobileScannerController();
   @override
   void initState() {
     super.initState();
     _onQRViewCreated;
-
 
   }
   // In order to get hot reload to work we need to pause the camera if the platform
@@ -71,6 +68,7 @@ class _ScanScreenState extends State<ScanScreen> {
     }
   }
 
+  var result;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +93,54 @@ class _ScanScreenState extends State<ScanScreen> {
                 border: Border.all(color: Colors.black),
                 borderRadius: BorderRadius.circular(10)
             ),
-            child: QRView(
+            // child: MobileScanner(
+            //     fit: BoxFit.cover,
+            //     // allowDuplicates: false,
+            //     controller: cameraController,
+            //     onDetect: (barcode) {
+            //       if (barcode.barcodes == null) {
+            //         debugPrint('Failed to scan Barcode');
+            //       } else {
+            //         // storeSharedPreference();
+            //         result = barcode.barcodes;
+            //         debugPrint('Barcode found! $result');
+            //         if(result !=""|| result != null){
+            //           List ans;
+            //           ans = result.split('_');
+            //           print("checking here ans value ${ans} and ${ans[1]}");
+            //           //   bool? oType = pref!.getBool('isTakeAway');
+            //           cameraController.dispose();
+            //           //  Navigator.of(context).pop();
+            //
+            //
+            //           // checkRestrauntBooking(ans[0].toString(), orderType.toString(), result);
+            //
+            //           ///  test mode section here
+            //
+            //           // print("order type here ${oType}");
+            //           // if(ans[1] == 0 || ans[1] == "0") {
+            //           //   print("aaaaa");
+            //           //   checkRestrauntBooking(
+            //           //       ans[0].toString(), orderType.toString(), result);
+            //           //   //Fluttertoast.showToast(msg: "Its working fine  with ${result}");
+            //           // }
+            //           // else{
+            //           //   Navigator.of(context).pop();
+            //           //   Fluttertoast.showToast(msg: "Please select a different qr");
+            //           // }
+            //           // if(ans[1] != 0 || ans[1] != "0"){
+            //           //   print("cccc");
+            //           //   checkTableBooking("${ans[0]}","${ans[1]}".toString());
+            //           // }
+            //           // else{
+            //           //   Navigator.of(context).pop();
+            //           //   Fluttertoast.showToast(msg: "Please select a different qr");
+            //           // }
+            //
+            //         }
+            //       }
+            //     }),
+           child: QRView(
               key: qrKey,
               onQRViewCreated: _onQRViewCreated,
             ),

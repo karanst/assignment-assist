@@ -67,6 +67,8 @@ dependencies:
   cached_network_image: ^3.2.0
   platform_device_id: ^1.0.1
   qr_code_scanner: ^1.0.1
+  mobile_scanner:
+#  ^3.0.0
 #  flutter_pdfview: ^1.2.5
   carousel_slider: ^4.2.1
 #  syncfusion_flutter_pdfviewer: ^20.4.49

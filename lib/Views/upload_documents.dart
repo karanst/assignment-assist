@@ -364,8 +364,7 @@ class _ViewDocumentsState extends State<ViewDocuments> {
                                 padding: const EdgeInsets.all(8),
                                 height: 60,
                                 width: MediaQuery.of(context).size.width/2 - 25,
-                              child:
-                              selectedTime1 != null
+                              child: selectedTime1 != null
                                   ?
                               Row (
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

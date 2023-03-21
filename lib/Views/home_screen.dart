@@ -574,20 +574,21 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
 
-          ListTile(
-            // leading: Icon(Icons.home),
-            // leading: Image.asset("assets),
-            leading:  Icon(Icons.safety_divider_outlined, size: 25,
-              color: secondaryColor,),
-            // Image.asset("images/icons/home_fill.png", color: Colors.white, height: 25, width: 25,),
-            // leading: const ImageIcon(AssetImage("images/icons/Home.png", )),
-            title:  Text('Refer and Earn', style: TextStyle(color: secondaryColor, fontSize: 16, fontWeight: FontWeight.w500),),
-            onTap: () {
-              Navigator.push(
-                context, MaterialPageRoute(builder: (context) => const ReferEarnScreen()),
-              );
-            },
-          ),
+          // ListTile(
+          //   // leading: Icon(Icons.home),
+          //   // leading: Image.asset("assets),
+          //   leading:  Icon(Icons.safety_divider_outlined, size: 25,
+          //     color: secondaryColor,),
+          //   // Image.asset("images/icons/home_fill.png", color: Colors.white, height: 25, width: 25,),
+          //   // leading: const ImageIcon(AssetImage("images/icons/Home.png", )),
+          //   title:  Text('Refer and Earn', style: TextStyle(color: secondaryColor, fontSize: 16, fontWeight: FontWeight.w500),),
+          //   onTap: () {
+          //     Navigator.push(
+          //       context, MaterialPageRoute(builder: (context) => const ReferEarnScreen()),
+          //     );
+          //   },
+          // ),
+
           ListTile(
             // leading: Icon(Icons.security),
             leading: Icon(Icons.privacy_tip_outlined, color: secondaryColor, size: 25,),
@@ -601,6 +602,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
+
           ListTile(
             // leading: Icon(Icons.report),
             leading: Icon(Icons.people_alt_outlined, color: secondaryColor, size: 25,),
@@ -614,6 +616,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
+
           ListTile(
             // leading: Icon(Icons.support),
             leading: Icon(Icons.support_agent, size: 25, color: secondaryColor,),
@@ -640,6 +643,7 @@ class _HomeScreenState extends State<HomeScreen> {
             leading: Icon(Icons.logout, size: 25, color: secondaryColor,),
             title: Text('Log Out', style: TextStyle(color: secondaryColor, fontSize: 16, fontWeight: FontWeight.w500)),
           ),
+
           // Padding(
           //   padding: const EdgeInsets.only(top: 10),
           //   child: Divider(color: Colors.black,),
@@ -652,6 +656,7 @@ class _HomeScreenState extends State<HomeScreen> {
          const SizedBox(
             height: 35,
           ),
+
          const Padding(
             padding:  EdgeInsets.only(left: 15),
             child: Text("Follow Us", style: TextStyle(fontSize: 15, color: Colors.white)),

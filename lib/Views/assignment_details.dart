@@ -25,10 +25,11 @@ class AssignmentDetails extends StatefulWidget {
 
 class _AssignmentDetailsState extends State<AssignmentDetails> {
   bool isAccepted = false;
-  late Razorpay _razorpay;
+
   double advancePercent = 50;
   String advanceAmount = '';
   String? pricerazorpayy;
+  late Razorpay _razorpay;
 
 
   acceptRejectQuotation(String quotationId, assignmentId, status) async {
@@ -237,8 +238,6 @@ class _AssignmentDetailsState extends State<AssignmentDetails> {
     super.dispose();
     _razorpay.clear();
   }
-
-
 
   void openCheckout() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

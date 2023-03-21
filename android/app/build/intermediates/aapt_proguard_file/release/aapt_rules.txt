@@ -1,5 +1,7 @@
 -keep class android.app.Application { <init>(); }
+-keep class androidx.camera.core.impl.MetadataHolderService { <init>(); }
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.startup.InitializationProvider { <init>(); }
 -keep class com.assignmentassist.MainActivity { <init>(); }
 -keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver { <init>(); }
 -keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver { <init>(); }
@@ -16,6 +18,9 @@
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+-keep class com.google.mlkit.common.internal.MlKitComponentDiscoveryService { <init>(); }
+-keep class com.google.mlkit.common.internal.MlKitInitProvider { <init>(); }
+-keep class com.journeyapps.barcodescanner.CaptureActivity { <init>(); }
 -keep class com.razorpay.CheckoutActivity { <init>(); }
 -keep class com.razorpay.RzpTokenReceiver { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService { <init>(); }
@@ -63,6 +68,12 @@
 -keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.journeyapps.barcodescanner.BarcodeView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.journeyapps.barcodescanner.DecoratedBarcodeView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.journeyapps.barcodescanner.ViewfinderView { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class com.razorpay.CircularProgressView { <init>(android.content.Context, android.util.AttributeSet); }
 
